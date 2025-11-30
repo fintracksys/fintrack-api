@@ -1,0 +1,129 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum PaymentMethod {
+  CREDIT_CARD
+  DEBIT_CARD
+  CASH
+  PIX
+  BANK_TRANSFER
+  CHECK
+  OTHER
+
+  @@map("payment_method")
+}
+
+model User {
+  id               String            @id @default(nanoid(16)) @map("id")
+  name             String            @map("name")
+  email            String            @unique @map("email")
+  password         String            @map("password")
+  createdAt        DateTime          @default(now()) @map("created_at")
+  accounts         Account[]
+  categories       Category[]
+  subcategories    Subcategory[]
+  transactionTypes TransactionType[]
+  transactions     Transaction[]
+
+  @@map("user")
+}
+
+model Account {
+  id           String        @id @default(nanoid(16)) @map("id")
+  name         String        @map("name")
+  createdAt    DateTime      @default(now()) @map("created_at")
+  deletedAt    DateTime?     @map("deleted_at")
+  userId       String?       @map("user_id")
+  user         User?         @relation(fields: [userId], references: [id])
+  transactions Transaction[]
+
+  @@map("account")
+}
+
+model Category {
+  id           String        @id @default(nanoid(16)) @map("id")
+  name         String        @map("name")
+  createdAt    DateTime      @default(now()) @map("created_at")
+  deletedAt    DateTime?     @map("deleted_at")
+  userId       String?       @map("user_id")
+  user         User?         @relation(fields: [userId], references: [id])
+  transactions Transaction[]
+
+  @@map("category")
+}
+
+model Subcategory {
+  id           String        @id @default(nanoid(16)) @map("id")
+  name         String        @map("name")
+  createdAt    DateTime      @default(now()) @map("created_at")
+  deletedAt    DateTime?     @map("deleted_at")
+  userId       String?       @map("user_id")
+  user         User?         @relation(fields: [userId], references: [id])
+  transactions Transaction[]
+
+  @@map("subcategory")
+}
+
+model TransactionType {
+  id           String        @id @default(nanoid(16)) @map("id")
+  name         String        @map("name")
+  createdAt    DateTime      @default(now()) @map("created_at")
+  deletedAt    DateTime?     @map("deleted_at")
+  userId       String?       @map("user_id")
+  user         User?         @relation(fields: [userId], references: [id])
+  transactions Transaction[]
+
+  @@map("transaction_type")
+}
+
+model Transaction {
+  id           String    @id @default(nanoid(16)) @map("id")
+  storeName    String    @map("store_name")
+  storeAddress String    @map("store_address")
+  dateTicket   DateTime  @map("date_ticket")
+  timeTicket    String  @map("time_ticket")
+  paymentMethod PaymentMethod @map("payment_method")
+  cnpj         String    @map("cnpj")
+  urlNfe       String    @db.VarChar(500) @map("url_nfe")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  deletedAt    DateTime? @map("deleted_at")
+  userId            String @map("user_id")
+  accountId         String @map("account_id")
+  categoryId        String @map("category_id")
+  subcategoryId     String @map("subcategory_id")
+  transactionTypeId String @map("transaction_type_id")
+
+  user            User            @relation(fields: [userId], references: [id])
+  account         Account         @relation(fields: [accountId], references: [id])
+  category        Category        @relation(fields: [categoryId], references: [id])
+  subcategory     Subcategory     @relation(fields: [subcategoryId], references: [id])
+  transactionType TransactionType @relation(fields: [transactionTypeId], references: [id])
+
+  tickets Ticket[] // se quiser manter a relação com Ticket
+
+  @@map("transaction")
+}
+
+model Ticket {
+  id          String    @id @default(nanoid(16)) @map("id")
+  codProduct  String?   @map("cod_product")
+  nameProduct String    @map("name_product")
+  quantity    Decimal   @db.Decimal(10, 3) @map("quantity")
+  measure     String    @db.VarChar(2) @map("measure")
+  price       Decimal   @db.Decimal(10, 2) @map("price")
+  totalValue  Decimal   @db.Decimal(10, 2) @map("total_value")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+
+  transactionId String @map("transaction_id")
+  transaction Transaction @relation(fields: [transactionId], references: [id])
+
+  @@map("ticket")
+}
