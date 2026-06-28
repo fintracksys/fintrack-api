@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+
+<html class="sat-ui-theme">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="description" content="Sistema de Administração Tributária da Secretaria de Estado da Fazenda de Santa Catarina." />
+    <link id="favicon" href="/tax.NET/WebResource.axd?d=WwVHsdjpMUOAGl0M32aKbsYZbH3C9dLPBWhE5Khgi1hS86R0X297ZdlYP-HWQqWMjlJ98x-e02xFJLZGOS27-CT1fwFG2iws5wQ_G2dC0RGxvpe0qCjzG18z-IcK8xa3Gu9wMedvdxSOUJgq0&amp;t=639180887940000000" rel="shortcut icon" type="image/x-icon"></link><title>
+	Consulta Pública de NFCe
+</title><link id="cssFont-Material" href="/tax.NET/WebResource.axd?d=tZLD3-ZXDAWlDugh9DdVaZ2BCjxTaGUYSx_drLN8U0ANJ_iOCT74JiQEGeFfmS-9yIbjCCjhOcCLr_kdnl7fMzAnaB0-W53qOoocDyr8wFqHgNfvPeNxbuMAUBtSwBCYC1Fpt_qHgRqm91Enx6FaUCbAOdo1&amp;t=639180887940000000" rel="stylesheet" type="text/css"></link><link id="cssFont-Roboto" href="/tax.NET/WebResource.axd?d=TAZ8_-VgpfT6ReEL9PqZKftFn7URdF-mhUfHb3WQ6ON7pQ3WEfidaVyt7s2YBUWXp3f46jU3-cV8tm7Kkq0ERFdbGZ739EUQRgWG2oSLqADpFP2qz2mXWe6weQUCPE7LE4-TePVBCRoCHWDhShz2HYhlyz01&amp;t=639180887940000000" rel="stylesheet" type="text/css"></link><link id="cssBootstrap" href="/tax.NET/WebResource.axd?d=lDpCe6CAN_FPtrF-_zCmvK3n-jAgpsRUQmjW1kPTPnN_801IJv5ubdSKdn0qoGQWvyTzEHlHyfq_6VRozNZLEKEs7agkhXstKjXFIbVN63PQ1iwjrXHBirwHupwuED2CRv1cz0ptqs7qDcPY0&amp;t=639180887940000000" rel="stylesheet" type="text/css"></link><link id="cssFont-Glyphicons" href="/tax.NET/WebResource.axd?d=ZQSdIeoHh_JHNe0UhN80CAUPYBYNOObc-Hzf9KT9UdBFnF3xWVPqKop9VeAHvsjjv1WZMt1fX6iR6Deh7Icpsxa5xc1xU4seNYhNfvd2oPdXOvrhwDjrGK-Aj8Sx5v7vKGZiM3NOhDDlw65qeKHxibgJbkg1&amp;t=639180887940000000" rel="stylesheet" type="text/css"></link><link id="cssPage" href="/tax.NET/WebResource.axd?d=cQJGbdUDos80BR2Zdvp-miW2R4OUroBG5iaLuUrltDrY-ixrfAwDgaLk_Nv8o5JD03TGRoAbIMSez4Hq7QaZH-raLYsvXSXFH_BtUwrY2DdFUz5NsyxRMH2r-Qky_jPRf0wX2Wly9QrJrgzQ0&amp;t=639180887940000000" rel="stylesheet" type="text/css"></link><link id="cssValidationSummary" href="/tax.NET/WebResource.axd?d=NBeodhYD65Su4u9luquhujl-CulysjYmH0NBMMM-DcUdNzHQ3feKNYLXgebCij78F4tKV8i8SFXY4q4huNxdgBAB4lAfhPU5sqLbVG-skTWY3yKWJ2Oc9WwPDkaisAi0dHdOVKqRRkIISnKmg230GvYCHts1&amp;t=639180887940000000" rel="stylesheet" type="text/css"></link><link id="PageTheme" href="/tax.NET/WebResourceHandler.axd?Sat.Framework.Web.UI.WebResources.StyleSheets.PageTheme.css" rel="stylesheet" type="text/css"></link><link id="cssBasePanel" href="/tax.NET/WebResource.axd?d=iZ0_74YpbPXygRtI7Z6zA9ImpDIr8rJjgulOa4SFBmKVxgb8KcPgC1mdK0ZkVN5PZGXj5g77gVZdE3k6IateSPoOsDvG6bu5o0cdBO3mRzmAQdcn516BBvmXD4mZnGGU3a1VCjVLaEAKZ6rbR-LH49f6foMBzXtSTHdDms3n6MHwGop050FKdPtOUJM1&amp;t=639180888080000000" rel="stylesheet" type="text/css"></link><link id="cssIconControl" href="/tax.NET/WebResource.axd?d=30YSbjDJgLmHrU07jk58mGoy7KqJT_1yvzsnbGCUA-poIZgyOMuYbonTW6sR5yBjlzMYugBIIUykmXBmr-prI-h7klu504MMsXUUbyV3L_of7SPhhUbfgDlkPvaRkl3J62DYUKTxRhEebAFEdVz-Vp9ie5RiShzkqiOV4fml0JVVQJg06Vb382frNPo1&amp;t=639180888080000000" rel="stylesheet" type="text/css"></link><link id="cssBaseButton" href="/tax.NET/WebResource.axd?d=3jQkiag2LCS0LlR_rhOt1-1ZjyX8UsCwvrwViFhuR2NpXosf534rccuW0qC2B7tkAUH8gKqEVMveWBSZFuR6-zrrVFOZ0-onHWQdgs4YfxxQISlXD_bdKwJXOU8jBvcbU-nTNttjuEZf5oiG83_u1sPy0b6g5CXp2JOjBdEMxnh65LWVLhYjZ-Sp1y01&amp;t=639180888080000000" rel="stylesheet" type="text/css"></link><link id="cssUpdateProgress" href="/tax.NET/WebResource.axd?d=6ua9c3oPqYQu2RR1s7eTSEvax7P0UsJPaYWriahXpcekauxHAamHmkhIyp3FpaHvRigZb73F-6eGX5UvvcW11RNa3e8rrhACgaGILfKDh8arR1VgE-XwAGz1g1RU8nsY5Vlp0eJA7x2l_8WTr4owPDfJYbs1&amp;t=639180887940000000" rel="stylesheet" type="text/css"></link></head>
+<body class="sat-bs">
+    <form method="post" action="/tax.NET/Sat.DFe.NFCe.Web/Consultas/NFCe_Detalhes.aspx?rq=t8BOzGQxqyEgg9ZZ95dPZWzijZwmn14zEtHkyIZLtmQl2IyhyB2f8WdmhWePZjUrmSmnKVGsa6gU2FgdT2wRlphAuoa85lrPSe8U4ot4ABZ6%2FPqfD7yE7n%2BUhrddHy7lSjRiL7rEPL78lj77UbpgwjQg9fC%2BI%2BAe" id="Main" class="sat-ui-form">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzY1NzY1NDkzDxYGHgdfcGFnZUlEBSQ0NWM2ZGQ3Yy00MDRhLTQzYzItOWRmYy05OGUzMTQyYzUwZTkeO1NhdC5GcmFtZXdvcmsuV2ViLlBhZ2VFeHRlbnNpb25zLkNvbnRyb2xzUmVnaXN0ZXJlZFRvSGVhZGVyMrUDAAEAAAD/////AQAAAAAAAAAEAQAAAH9TeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24GAAAICAkCAAAADAAAAAwAAAARAgAAABAAAAAGAwAAAAdmYXZpY29uBgQAAAAQY3NzRm9udC1NYXRlcmlhbAYFAAAADmNzc0ZvbnQtUm9ib3RvBgYAAAAMY3NzQm9vdHN0cmFwBgcAAAASY3NzRm9udC1HbHlwaGljb25zBggAAAAHY3NzUGFnZQYJAAAAFGNzc1ZhbGlkYXRpb25TdW1tYXJ5BgoAAAAJUGFnZVRoZW1lBgsAAAAMY3NzQmFzZVBhbmVsBgwAAAAOY3NzSWNvbkNvbnRyb2wGDQAAAA1jc3NCYXNlQnV0dG9uBg4AAAARY3NzVXBkYXRlUHJvZ3Jlc3MNBAseOVNhdC5GcmFtZXdvcmsuV2ViLlBhZ2VFeHRlbnNpb25zLkNvbnRyb2xzUmVnaXN0ZXJlZFNjcmlwdDLUBwABAAAA/////wEAAAAAAAAABAEAAAB/U3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuTGlzdGAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQMAAAAGX2l0ZW1zBV9zaXplCF92ZXJzaW9uBgAACAgJAgAAAAwAAAAMAAAAEQIAAAAQAAAABgMAAAA3U2F0LkZyYW1ld29yay5XZWIuVUkuV2ViUmVzb3VyY2VzLkphdmFTY3JpcHRzLkpRdWVyeS5qcwYEAAAAPlNhdC5GcmFtZXdvcmsuV2ViLlVJLldlYlJlc291cmNlcy5KYXZhU2NyaXB0cy5KUXVlcnktQ29va2llLmpzBgUAAABCU2F0LkZyYW1ld29yay5XZWIuVUkuV2ViUmVzb3VyY2VzLkphdmFTY3JpcHRzLkpRdWVyeS1TbGltU2Nyb2xsLmpzBgYAAAA6U2F0LkZyYW1ld29yay5XZWIuVUkuV2ViUmVzb3VyY2VzLkphdmFTY3JpcHRzLkJvb3RzdHJhcC5qcwYHAAAAOVNhdC5GcmFtZXdvcmsuV2ViLlVJLldlYlJlc291cmNlcy5KYXZhU2NyaXB0cy5JbnRlcm5hbC5qcwYIAAAAOlNhdC5GcmFtZXdvcmsuV2ViLlVJLldlYlJlc291cmNlcy5KYXZhU2NyaXB0cy5Qcm90b3R5cGUuanMGCQAAADRTYXQuRnJhbWV3b3JrLldlYi5VSS5XZWJSZXNvdXJjZXMuSmF2YVNjcmlwdHMuU2F0LmpzBgoAAAA7U2F0LkZyYW1ld29yay5XZWIuVUkuV2ViUmVzb3VyY2VzLkphdmFTY3JpcHRzLkluaXRpYWxpemUuanMGCwAAAE5TYXQuRnJhbWV3b3JrLldlYi5VSS5XZWJDb250cm9scy5XZWJSZXNvdXJjZXMuSmF2YVNjcmlwdHMuVmFsaWRhdGlvblN1bW1hcnkuanMGDAAAAEZTYXQuRnJhbWV3b3JrLldlYi5VSS5XZWJDb250cm9scy5XZWJSZXNvdXJjZXMuSmF2YVNjcmlwdHMuQmFzZVBhbmVsLmpzBg0AAABHU2F0LkZyYW1ld29yay5XZWIuVUkuV2ViQ29udHJvbHMuV2ViUmVzb3VyY2VzLkphdmFTY3JpcHRzLkJhc2VCdXR0b24uanMGDgAAABBVcGRhdGVQcm9ncmVzc0lEDQQLFgJmD2QWAgIDDxYCHgZhY3Rpb24F4gEvdGF4Lk5FVC9TYXQuREZlLk5GQ2UuV2ViL0NvbnN1bHRhcy9ORkNlX0RldGFsaGVzLmFzcHg/cnE9dDhCT3pHUXhxeUVnZzlaWjk1ZFBaV3ppalp3bW4xNHpFdEhreUlaTHRtUWwySXloeUIyZjhXZG1oV2VQWmpVcm1TbW5LVkdzYTZnVTJGZ2RUMndSbHBoQXVvYTg1bHJQU2U4VTRvdDRBQlo2JTJGUHFmRDd5RTduJTJCVWhyZGRIeTdsU2pSaUw3ckVQTDc4bGo3N1VicGd3alFnOWZDJTJCSSUyQkFlFgICBw9kFggCAQ8WAh4HVmlzaWJsZWhkAgMPFgIeCWlubmVyaHRtbAWYMjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgdHlwZT0idGV4dC9jc3MiIGhyZWY9Ii4uL2VzdGlsb3MvanF1ZXJ5Lm1vYmlsZS0xLjQuNS5taW4uY3NzIj4NCjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgdHlwZT0idGV4dC9jc3MiIGhyZWY9Ii4uL2VzdGlsb3MvbmZjZU1vYl9pZS5jc3MiPg0KPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIgaHJlZj0iLi4vZXN0aWxvcy9uZmNlTW9iLmNzcyI+PHNjcmlwdCBsYW5ndWFnZT0iamF2YXNjcmlwdCIgc3JjPSIuLi9qcy9qcXVlcnkuanMiPjwvc2NyaXB0PjxzY3JpcHQgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiIHNyYz0iLi4vanMvanF1ZXJ5Lm1vYmlsZS0xLjQuNS5taW4uanMiPjwvc2NyaXB0PjxzY3JpcHQgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiIHNyYz0iLi4vanMvanF1ZXJ5dWkuanMiPjwvc2NyaXB0PjxzY3JpcHQgbGFuZ3VhZ2U9ImphdmFzY3JpcHQiIHNyYz0iLi4vanMvaW5kZXguanMiPjwvc2NyaXB0PjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgdHlwZT0idGV4dC9jc3MiIGhyZWY9Ii4uL2VzdGlsb3MvcHJpbnQuY3NzIj4NCjxkaXYgZGF0YS1yb2xlPSJoZWFkZXIiIHhtbG5zOm49Imh0dHA6Ly93d3cucG9ydGFsZmlzY2FsLmluZi5ici9uZmUiIHhtbG5zOmNoYXZlPSJodHRwOi8vZXhzbHQub3JnL2NoYXZlYWNlc3NvIiB4bWxuczpyPSJodHRwOi8vd3d3LnNlcnByby5nb3YuYnIvbmZlL3JlbWVzc2FuZmUueHNkIj4NCiAgPGgxIGNsYXNzPSJ0aXQiPjxpbWcgc3JjPSIuLlxpbWFnZW5zXGxvZ29ORkNlLnBuZyIgd2lkdGg9IjExMiIgaGVpZ2h0PSI2NCIgYWx0PSJORkMtZSI+PHA+RE9DVU1FTlRPIEFVWElMSUFSIERBIE5PVEEgRklTQ0FMIERFIENPTlNVTUlET1IgRUxFVFLDlE5JQ0E8L3A+DQogICAgPHA+PC9wPg0KICA8L2gxPg0KPC9kaXY+DQo8ZGl2IGRhdGEtcm9sZT0iY29udGVudCIgeG1sbnM6bj0iaHR0cDovL3d3dy5wb3J0YWxmaXNjYWwuaW5mLmJyL25mZSIgeG1sbnM6Y2hhdmU9Imh0dHA6Ly9leHNsdC5vcmcvY2hhdmVhY2Vzc28iIHhtbG5zOnI9Imh0dHA6Ly93d3cuc2VycHJvLmdvdi5ici9uZmUvcmVtZXNzYW5mZS54c2QiPg0KICA8ZGl2IGlkPSJjb250ZXVkbyI+DQogICAgPGRpdiBpZD0iYXZpc29zIj48L2Rpdj4NCiAgICA8ZGl2IGNsYXNzPSJ0eHRDZW50ZXIiPg0KICAgICAgPGRpdiBpZD0idTIwIiBjbGFzcz0idHh0VG9wbyI+TUlOSU1FUkNBRE8gUk9EQU4gTFREQTwvZGl2Pg0KICAgICAgPGRpdiBjbGFzcz0idGV4dCI+DQoJCQkJCQkJCUNOUEo6DQoJCQkJCQkJCTM2LjQ5Ni4wMTgvMDAwMS03MzwvZGl2Pg0KICAgICAgPGRpdiBjbGFzcz0idGV4dCI+UlVBIEpPU0UgTFVJWiBNQVJDRUxJTk8NCgkJCQkJCQksDQoJCQkJCQkJNDk1DQoJCQkJCQkJLA0KCQkJCQkJCQ0KCQkJCQkJCSwNCgkJCQkJCQlNVVJUQQ0KCQkJCQkJCSwNCgkJCQkJCQlJVEFKQUkNCgkJCQkJCQksDQoJCQkJCQkJU0M8L2Rpdj4NCiAgICA8L2Rpdj4NCiAgICA8dGFibGUgYm9yZGVyPSIwIiBhbGlnbj0iY2VudGVyIiBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiIGlkPSJ0YWJSZXN1bHQiIGRhdGEtZmlsdGVyPSJ0cnVlIj4NCiAgICAgIDx0ciBpZD0iSXRlbSArIDEiPg0KICAgICAgICA8dGQgdmFsaWduPSJ0b3AiPjxzcGFuIGNsYXNzPSJ0eHRUaXQiPlNBTFNJQ0hBIFBFUkRJR0FPPC9zcGFuPjxzcGFuIGNsYXNzPSJSQ29kIj4NCgkJCQkJCQkJCQkoQ8OzZGlnbzoNCgkJCQkJCQkJCQkyNTgNCgkJCQkJCQkJCQkpDQoJCQkJCQkJCQk8L3NwYW4+PGJyPjxzcGFuIGNsYXNzPSJScXRkIj48c3Ryb25nPlF0ZGUuOjwvc3Ryb25nPjAsMzg8L3NwYW4+PHNwYW4gY2xhc3M9IlJVTiI+PHN0cm9uZz5VTjogPC9zdHJvbmc+S0c8L3NwYW4+PHNwYW4gY2xhc3M9IlJ2bFVuaXQiPjxzdHJvbmc+VmwuIFVuaXQuOjwvc3Ryb25nPg0KCQkJCQkJCQkJCcKgDQoJCQkJCQkJCQkJMTYsOTk8L3NwYW4+PC90ZD4NCiAgICAgICAgPHRkIGFsaWduPSJyaWdodCIgdmFsaWduPSJ0b3AiIGNsYXNzPSJ0eHRUaXQgbm9XcmFwIj4NCgkJCQkJCQkJCVZsLiBUb3RhbA0KCQkJCQkJCQkJPGJyPjxzcGFuIGNsYXNzPSJ2YWxvciI+Niw0NTwvc3Bhbj48L3RkPg0KICAgICAgPC90cj4NCiAgICAgIDx0ciBpZD0iSXRlbSArIDIiPg0KICAgICAgICA8dGQgdmFsaWduPSJ0b3AiPjxzcGFuIGNsYXNzPSJ0eHRUaXQiPkJBQ09OPC9zcGFuPjxzcGFuIGNsYXNzPSJSQ29kIj4NCgkJCQkJCQkJCQkoQ8OzZGlnbzoNCgkJCQkJCQkJCQkxNzINCgkJCQkJCQkJCQkpDQoJCQkJCQkJCQk8L3NwYW4+PGJyPjxzcGFuIGNsYXNzPSJScXRkIj48c3Ryb25nPlF0ZGUuOjwvc3Ryb25nPjAsMTM1PC9zcGFuPjxzcGFuIGNsYXNzPSJSVU4iPjxzdHJvbmc+VU46IDwvc3Ryb25nPktHPC9zcGFuPjxzcGFuIGNsYXNzPSJSdmxVbml0Ij48c3Ryb25nPlZsLiBVbml0Ljo8L3N0cm9uZz4NCgkJCQkJCQkJCQnCoA0KCQkJCQkJCQkJCTY0LDk5PC9zcGFuPjwvdGQ+DQogICAgICAgIDx0ZCBhbGlnbj0icmlnaHQiIHZhbGlnbj0idG9wIiBjbGFzcz0idHh0VGl0IG5vV3JhcCI+DQoJCQkJCQkJCQlWbC4gVG90YWwNCgkJCQkJCQkJCTxicj48c3BhbiBjbGFzcz0idmFsb3IiPjgsNzc8L3NwYW4+PC90ZD4NCiAgICAgIDwvdHI+DQogICAgICA8dHIgaWQ9Ikl0ZW0gKyAzIj4NCiAgICAgICAgPHRkIHZhbGlnbj0idG9wIj48c3BhbiBjbGFzcz0idHh0VGl0Ij5NT0xITyBRVUVSTyBNQU5KRVJJQ0FPIDM0MEdSPC9zcGFuPjxzcGFuIGNsYXNzPSJSQ29kIj4NCgkJCQkJCQkJCQkoQ8OzZGlnbzoNCgkJCQkJCQkJCQk0NTEzOA0KCQkJCQkJCQkJCSkNCgkJCQkJCQkJCTwvc3Bhbj48YnI+PHNwYW4gY2xhc3M9IlJxdGQiPjxzdHJvbmc+UXRkZS46PC9zdHJvbmc+MTwvc3Bhbj48c3BhbiBjbGFzcz0iUlVOIj48c3Ryb25nPlVOOiA8L3N0cm9uZz5VTjwvc3Bhbj48c3BhbiBjbGFzcz0iUnZsVW5pdCI+PHN0cm9uZz5WbC4gVW5pdC46PC9zdHJvbmc+DQoJCQkJCQkJCQkJwqANCgkJCQkJCQkJCQkzLDU5PC9zcGFuPjwvdGQ+DQogICAgICAgIDx0ZCBhbGlnbj0icmlnaHQiIHZhbGlnbj0idG9wIiBjbGFzcz0idHh0VGl0IG5vV3JhcCI+DQoJCQkJCQkJCQlWbC4gVG90YWwNCgkJCQkJCQkJCTxicj48c3BhbiBjbGFzcz0idmFsb3IiPjMsNTk8L3NwYW4+PC90ZD4NCiAgICAgIDwvdHI+DQogICAgICA8dHIgaWQ9Ikl0ZW0gKyA0Ij4NCiAgICAgICAgPHRkIHZhbGlnbj0idG9wIj48c3BhbiBjbGFzcz0idHh0VGl0Ij5QQU8gRlJBTkNFUzwvc3Bhbj48c3BhbiBjbGFzcz0iUkNvZCI+DQoJCQkJCQkJCQkJKEPDs2RpZ286DQoJCQkJCQkJCQkJNjENCgkJCQkJCQkJCQkpDQoJCQkJCQkJCQk8L3NwYW4+PGJyPjxzcGFuIGNsYXNzPSJScXRkIj48c3Ryb25nPlF0ZGUuOjwvc3Ryb25nPjAsNDwvc3Bhbj48c3BhbiBjbGFzcz0iUlVOIj48c3Ryb25nPlVOOiA8L3N0cm9uZz5LRzwvc3Bhbj48c3BhbiBjbGFzcz0iUnZsVW5pdCI+PHN0cm9uZz5WbC4gVW5pdC46PC9zdHJvbmc+DQoJCQkJCQkJCQkJwqANCgkJCQkJCQkJCQkxMyw5OTwvc3Bhbj48L3RkPg0KICAgICAgICA8dGQgYWxpZ249InJpZ2h0IiB2YWxpZ249InRvcCIgY2xhc3M9InR4dFRpdCBub1dyYXAiPg0KCQkJCQkJCQkJVmwuIFRvdGFsDQoJCQkJCQkJCQk8YnI+PHNwYW4gY2xhc3M9InZhbG9yIj41LDU5PC9zcGFuPjwvdGQ+DQogICAgICA8L3RyPg0KICAgIDwvdGFibGU+DQogICAgPGRpdiBpZD0idG90YWxOb3RhIiBjbGFzcz0idHh0UmlnaHQiPg0KICAgICAgPGRpdiBpZD0ibGluaGFUb3RhbCI+PGxhYmVsPlF0ZC4gdG90YWwgZGUgaXRlbnM6PC9sYWJlbD48c3BhbiBjbGFzcz0idG90YWxOdW1iIj40PC9zcGFuPjwvZGl2Pg0KICAgICAgPGRpdiBpZD0ibGluaGFUb3RhbCIgY2xhc3M9ImxpbmhhU2hhZGUiPjxsYWJlbD5WYWxvciBhIHBhZ2FyIFIkOjwvbGFiZWw+PHNwYW4gY2xhc3M9InRvdGFsTnVtYiB0eHRNYXgiPjI0LDQwPC9zcGFuPjwvZGl2Pg0KICAgICAgPGRpdiBpZD0ibGluaGFGb3JtYSI+PGxhYmVsPkZvcm1hIGRlIHBhZ2FtZW50bzo8L2xhYmVsPjxzcGFuIGNsYXNzPSJ0b3RhbE51bWIgdHh0VGl0UiI+VmFsb3IgcGFnbyBSJDo8L3NwYW4+PC9kaXY+DQogICAgICA8ZGl2IGlkPSJsaW5oYVRvdGFsIj48bGFiZWwgY2xhc3M9InR4Ij4NCgkJCQkJCQkJCQkJQ2FydMOjbyBkZSBEw6liaXRvDQoJCQkJCQkJCQkJPC9sYWJlbD48c3BhbiBjbGFzcz0idG90YWxOdW1iIj4yNCw0MDwvc3Bhbj48L2Rpdj4NCiAgICAgIDxkaXYgaWQ9ImxpbmhhVG90YWwiPjwvZGl2Pg0KICAgICAgPGRpdiBpZD0ibGluaGFUb3RhbCIgY2xhc3M9InNwY1RvcCI+PGxhYmVsIGNsYXNzPSJ0eHRPYnMiPkluZm9ybWHDp8OjbyBkb3MgVHJpYnV0b3MgVG90YWlzIEluY2lkZW50ZXMNCgkJCQkJCQkJCShMZWkgRmVkZXJhbCAxMi43NDEvMjAxMinCoFIkPC9sYWJlbD48c3BhbiBjbGFzcz0idG90YWxOdW1iIHR4dE9icyI+NSwyOTwvc3Bhbj48L2Rpdj4NCiAgICA8L2Rpdj4NCiAgPC9kaXY+DQogIDxkaXYgaWQ9ImluZm9zIiBjbGFzcz0idHh0Q2VudGVyIj4NCiAgICA8ZGl2IGRhdGEtcm9sZT0iY29sbGFwc2libGUiIGRhdGEtY29sbGFwc2VkLWljb249ImNhcmF0LWQiIGRhdGEtZXhwYW5kZWQtaWNvbj0iY2FyYXQtdSIgZGF0YS1jb2xsYXBzZWQ9ImZhbHNlIj4NCiAgICAgIDxoND5JbmZvcm1hw6fDtWVzIGdlcmFpcyBkYSBOb3RhPC9oND4NCiAgICAgIDx1bCBkYXRhLXJvbGU9Imxpc3R2aWV3IiBkYXRhLWluc2V0PSJmYWxzZSI+DQogICAgICAgIDxsaT48c3Ryb25nPkVNSVRJREEgRU0gQ09OVElOR8OKTkNJQTwvc3Ryb25nPjxicj48YnI+PHN0cm9uZz5Ow7ptZXJvOiA8L3N0cm9uZz4yOTU3MDxzdHJvbmc+IFPDqXJpZTogPC9zdHJvbmc+MTxzdHJvbmc+IEVtaXNzw6NvOiA8L3N0cm9uZz4yNS8wNy8yMDI1IDE3OjMyOjE2DQoJCQkJCQkJCS0gVmlhIENvbnN1bWlkb3IgMg0KCQkJCQkJCQk8YnI+PGJyPjxzdHJvbmc+UHJvdG9jb2xvIGRlIEF1dG9yaXphw6fDo286IDwvc3Ryb25nPjI0MjI1MTAxMDE1ODg1MSAgICAgICAyNS8wNy8yMDI1IA0KICAgICAgICDDoHMNCiAgICAgIDE3OjM1OjUyPGJyPjxicj48c3Ryb25nPg0KCQkJCQkJCQkJCUFtYmllbnRlIGRlIFByb2R1w6fDo28gLQ0KCQkJCQkJCQkJDQoJCQkJCQkJCQlWZXJzw6NvIFhNTDoNCgkJCQkJCQkJCTQuMDANCgkJCQkJCQkJCS0gVmVyc8OjbyBYU0xUOiAyLjA3DQoJCQkJCQkJCTwvc3Ryb25nPjwvbGk+DQogICAgICA8L3VsPg0KICAgIDwvZGl2Pg0KICAgIDxkaXYgZGF0YS1yb2xlPSJjb2xsYXBzaWJsZSIgZGF0YS1jb2xsYXBzZWQtaWNvbj0iY2FyYXQtZCIgZGF0YS1leHBhbmRlZC1pY29uPSJjYXJhdC11IiBkYXRhLWNvbGxhcHNlZD0iZmFsc2UiPg0KICAgICAgPGg0PkNoYXZlIGRlIGFjZXNzbzwvaDQ+DQogICAgICA8dWwgZGF0YS1yb2xlPSJsaXN0dmlldyIgZGF0YS1pbnNldD0iZmFsc2UiPg0KICAgICAgICA8bGk+DQoJCQkJCQkJCUNvbnN1bHRlIHBlbGEgQ2hhdmUgZGUgQWNlc3NvIGVtDQoJCQkJCQkJCQ0KCQkJCQkJCQlodHRwczovL3NhdC5zZWYuc2MuZ292LmJyL25mY2UvY29uc3VsdGE8YnI+PGJyPjxzdHJvbmc+Q2hhdmUgZGUgYWNlc3NvOjwvc3Ryb25nPjxicj48c3BhbiBjbGFzcz0iY2hhdmUiPjQyMjUgMDczNiA0OTYwIDE4MDAgMDE3MyA2NTAwIDEwMDAgMDI5NSA3MDk4IDk3NjEgNDg0ODwvc3Bhbj48L2xpPg0KICAgICAgPC91bD4NCiAgICA8L2Rpdj4NCiAgICA8ZGl2IGRhdGEtcm9sZT0iY29sbGFwc2libGUiIGRhdGEtY29sbGFwc2VkLWljb249ImNhcmF0LWQiIGRhdGEtZXhwYW5kZWQtaWNvbj0iY2FyYXQtdSIgZGF0YS1jb2xsYXBzZWQ9ImZhbHNlIj4NCiAgICAgIDxoND5Db25zdW1pZG9yPC9oND4NCiAgICAgIDx1bCBkYXRhLXJvbGU9Imxpc3R2aWV3IiBkYXRhLWluc2V0PSJmYWxzZSI+DQogICAgICAgIDxsaT48c3Ryb25nPkNvbnN1bWlkb3IgbsOjbyBpZGVudGlmaWNhZG88L3N0cm9uZz48L2xpPg0KICAgICAgPC91bD4NCiAgICA8L2Rpdj4NCiAgICA8ZGl2IGRhdGEtcm9sZT0iY29sbGFwc2libGUiIGRhdGEtY29sbGFwc2VkLWljb249ImNhcmF0LWQiIGRhdGEtZXhwYW5kZWQtaWNvbj0iY2FyYXQtdSIgZGF0YS1jb2xsYXBzZWQ9ImZhbHNlIj4NCiAgICAgIDxoND5JbmZvcm1hw6fDtWVzIGRlIGludGVyZXNzZSBkbyBjb250cmlidWludGU8L2g0Pg0KICAgICAgPHVsIGRhdGEtcm9sZT0ibGlzdHZpZXciIGRhdGEtaW5zZXQ9ImZhbHNlIj4NCiAgICAgICAgPGxpPlRyaWIgYXByb3ggUiQ6IDIsNTMgRmVkIGUgMiw3NiBFc3Q7Rm9udGU6IFNJU0NPTUVYIFNDICAgICAgO09wZXJhZG9yOiAxIFZlbmRlZG9yOiAtO0F1dG9tYXRpemFkbyBwb3I6O3d3dy5CUlZBVEVDSC5jb20uYnI8L2xpPg0KICAgICAgPC91bD4NCiAgICA8L2Rpdj4NCiAgPC9kaXY+DQo8L2Rpdj5kAgUPDxYCHgRUZXh0BRMyNy8wNi8yMDI2IDIzOjM0OjE2ZGQCBw8PFgQeCENzc0NsYXNzBRNwYW5lbCBwYW5lbC1kZWZhdWx0HgRfIVNCAgJkFgRmDw8WBB8HBSRwYW5lbC1oZWFkaW5nIHNhdC1wYW5lbC1oZWFkaW5nIGhpZGUfCAICZGQCAQ8PFgQfBwUUc2F0LXBhbmVsLWNvbnRlbnQgaW4fCAICZBYCZg8PFgQfBwUKcGFuZWwtYm9keR8IAgJkZGS/3jNWtbqLuVFm/KlL9NVD5F79eA==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Main'];
+if (!theForm) {
+    theForm = document.Main;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/tax.NET/WebResource.axd?d=UAJ1aQIOaAYd4rvzqUeWTOJ4sxEPw0nqOGbLviGVr7YVZilyrpBDirsQSgI1&amp;t=638901428248157332" type="text/javascript"></script>
+
+
+<script src="/tax.NET/ScriptResource.axd?d=p7FeWqfT0U8rcYk8Dxl-kRJg4zkb4-l7G0uIUVQRfyYHlVjW6YU6vy7Nq_u5RTXY9YJxNt5gfdLNfKWa6hqaC-s-uku4hHZ9S1O8GNN4lHJ8Y01GeikP2ZWHp6UhZXSkQcZihLI41kZZ55Al0&amp;t=1ec5a446" type="text/javascript"></script>
+<script src="/tax.NET/ScriptResource.axd?d=Kw0M2dCJwrmEIX_OELob_XYvM_RL04YWI-B6epUsKhozVD3eilSCsTO4ZGwy_drpLBCuoRpEKLvfiuPNLiH6pvb-zvM1xhbJ2RR-xWnHClUcLgj26q5y8vBfj17M3cBg1cIT6UutVC4_Pvv0dHTCf5_pRqY1&amp;t=1ec5a446" type="text/javascript"></script>
+<script src="/tax.NET/ScriptResource.axd?d=Se9_XQjOLGX-xyDfFu1edncmYxVvYWgnk4Q3eaGbhz4zEI7mPpSoMuQQrbEjkak0tPdbxJvQYGfHLEeyc-38ttjmgFI8lphTJsbmWaF3CCZ8E1NsAxuoXcNix3agRjSNlzo0kzDwejWUVq2oX5HUe7rkLdA1&amp;t=1ec5a446" type="text/javascript"></script>
+<script src="/tax.NET/ScriptResource.axd?d=LBFApjWgCbGZrrW2ldqrFkjHgWS6VZ3zGjMHbPmQLPSDn3HAJxYQZmlMGUNXs6pQBYlKPLm7bnM3S3gYv4YusfEte_vvHj_cTs7VIl3mjlowgkPY29jgZpjyfVCl9zPhrKTdwcoVVyT3UQbe0&amp;t=1ec5a446" type="text/javascript"></script>
+<script src="/tax.NET/ScriptResource.axd?d=xuUIL2sXMOOXviWkNMPT4JduFOWKTywxRhsmcpt14eOtPWFgzJgciD46gy5_yTvDRbwNMJ3oW-Wkv_Z9KJE2S15c2VsYbiq6JUb9Me_piA6Kg5vjwwgSXhRGRUfrmTuz2pkBJxp6Q6iRNZom0&amp;t=1ec5a446" type="text/javascript"></script>
+<script src="/tax.NET/ScriptResource.axd?d=HJKmvhDeYMLkx3_lNzg_z_41xTMKO2boRmnpZeXzmDtJ-N-HAMqQ7ZBNvgfVyKZsOr3H3kXoTqN_KBBlJhKD15YfUsysrw--4NSOzxo_XrLLk_EAymEjDweODhOX4oiIn6A1Fznf2I3DnagC0&amp;t=1ec5a446" type="text/javascript"></script>
+<script src="/tax.NET/ScriptResource.axd?d=Dz3xZ6b10BDtX1uxkgTDaEOfvneSSqaHybPUjUTfmeC8UY-mmal4R2exSVsso6pjLOspTZg7aZN69xU0lD5NoBJKjY5ELQTsJzxk68SpT223gadZ1Z5vD9d1hZLM5O4HLLndAfOh6Cmy4TQ50&amp;t=1ec5a446" type="text/javascript"></script>
+<script src="/tax.NET/ScriptResource.axd?d=zAasdCRQAJeF3VQGi6TG8mJVurgekZLpcUZDv3chxRdzV4cIOQB2Uj6rpFHU5adEcDKX6aq2njNOkxHuTs9spt71B-TsxG-y81uyWdpnIyCQHiSy3syBrt6YxcbnjYxyoH5J9GKq1jE6dmYd0&amp;t=1ec5a446" type="text/javascript"></script>
+<script src="JavaScriptResourceHandler.axd" type="text/javascript"></script>
+<script src="/tax.NET/ScriptResource.axd?d=Tf7IbzXK1l3SNep4UoW7de_24XGxuk0GqSF4L6ZVB2l1gRcWEHbptJf7WeAenv1phcz_aHMpFqmmiBkeQPtX-l5E2zU9qCmQ-0ZVy2PEmBTqvn-_FbZI3mpiUySCNLTXKyIPvjFQRxWHPLx9RVByDojNharnfKcrLiKTEp2TsaTCdZh6x9gy1HSNzJl8muvyFzJKOg2&amp;t=ffffffffca10b05f" type="text/javascript"></script>
+<script src="/tax.NET/ScriptResource.axd?d=1BLdyPvCXwa3nLPNBnSqT_dYCRubnwgog_3xIE2uNGS5XqVjm_zIthqyWd4qtOn8QLTv9N_ipuSZ6f-AKz8ocwrCYTvGEAgTQnYTUOxm77ulyX8CTIrVgV524uiIoUJGoxozBYbGWUCOW--OC-urrlFD_3fWhZ2YaY0BYyx7a5r8TI7PE4GOeqZoPPg1&amp;t=ffffffffca10b05f" type="text/javascript"></script>
+<script src="/tax.NET/ScriptResource.axd?d=Rf3e-3InqLy_Pe9_V1PmrPMKjghH-LL41D6Urfj7SjwS9lp_1yjSttXKM3UMF6VKLofBJju06JGWYeIkp_J1yv3u1jWu149_c-EqrDg2ZEzL3kO13GV2fbwN0i2L0tRta0qpkk3EgaeVz-IzVwkyvEQTg423FFhRhyitwccP4ACteAbg8imRjvzte7A1&amp;t=ffffffffca10b05f" type="text/javascript"></script>
+<script src="/tax.NET/ScriptResource.axd?d=TG93dVx_Sil7hopRJ1Qj1rT0eePf41nCWdN56JfD1lpZF-5JMcpr38cR2zebb3QEjMXvoQBp3JtPGaRtevqyr7yRY8t6by7m5o62A49rMJEdARunG8WGsaUHjErjY1N6MPf2aA2&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/tax.NET/ScriptResource.axd?d=JeFFjlByYRKWVOBrpCP3ZhcD6QqFHzCxCLYgzpZNyJvMBvBFAA1FBZ4pwWVUljh9MH0pEvz2RjgmUjLbu4ufgq9KxAXdBOy6bdxiOI3DtRgx2qM6qf_E1ixJpBQq9K2w6vDSzhSK-d46t4WA0&amp;t=5c0e0825" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="660A77A3" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAUHf0dlL3uTfd/9s3hNQAFgBaX9jkWcmVRqHIakW3DP7pDSEt7aiW4si+GPZc26W+Y9lgyvxkg2GiD5uIt5l1JoIw0I+cj0Xj5y/EupCYPO6Zg3F2SFwLR44Y7BYnM/n/zxdV+C" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$scmMain', 'Main', ['fctl00$ctnPageWindows','ctnPageWindows','fctl00$Body$conFooter$uppPanelButtons','Body_conFooter_uppPanelButtons','fctl00$updatableContainer','updatableContainer'], ['ctl00$Body$conFooter$btnDownload','Body_conFooter_btnDownload','ctl00$Body$conFooter$btnPrint','Body_conFooter_btnPrint','ctl00$Body$conFooter$btnVerDetalhe','Body_conFooter_btnVerDetalhe','ctl00$Body$conFooter','Body_conFooter','ctl00$postBackEventHandler','postBackEventHandler'], [], 90, 'ctl00');
+//]]>
+</script>
+
+        <div id="vasMain" style="display:none;">
+
+</div>
+		<div id="ctnPageWindows">
+
+</div>
+        
+    <html>
+    <head>
+        <title>NFCe - Detalhes</title>
+    </head>
+    <body>
+        <form>
+            <div>
+                <div style="text-align: center; background-color: red;">
+                    
+                </div>
+                <div id="Body_xsl"><link rel="stylesheet" type="text/css" href="../estilos/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" type="text/css" href="../estilos/nfceMob_ie.css">
+<link rel="stylesheet" type="text/css" href="../estilos/nfceMob.css"><script language="javascript" src="../js/jquery.js"></script><script language="javascript" src="../js/jquery.mobile-1.4.5.min.js"></script><script language="javascript" src="../js/jqueryui.js"></script><script language="javascript" src="../js/index.js"></script><link rel="stylesheet" type="text/css" href="../estilos/print.css">
+<div data-role="header" xmlns:n="http://www.portalfiscal.inf.br/nfe" xmlns:chave="http://exslt.org/chaveacesso" xmlns:r="http://www.serpro.gov.br/nfe/remessanfe.xsd">
+  <h1 class="tit"><img src="..\imagens\logoNFCe.png" width="112" height="64" alt="NFC-e"><p>DOCUMENTO AUXILIAR DA NOTA FISCAL DE CONSUMIDOR ELETRÔNICA</p>
+    <p></p>
+  </h1>
+</div>
+<div data-role="content" xmlns:n="http://www.portalfiscal.inf.br/nfe" xmlns:chave="http://exslt.org/chaveacesso" xmlns:r="http://www.serpro.gov.br/nfe/remessanfe.xsd">
+  <div id="conteudo">
+    <div id="avisos"></div>
+    <div class="txtCenter">
+      <div id="u20" class="txtTopo">MINIMERCADO RODAN LTDA</div>
+      <div class="text">
+								CNPJ:
+								36.496.018/0001-73</div>
+      <div class="text">RUA JOSE LUIZ MARCELINO
+							,
+							495
+							,
+							
+							,
+							MURTA
+							,
+							ITAJAI
+							,
+							SC</div>
+    </div>
+    <table border="0" align="center" cellpadding="0" cellspacing="0" id="tabResult" data-filter="true">
+      <tr id="Item + 1">
+        <td valign="top"><span class="txtTit">SALSICHA PERDIGAO</span><span class="RCod">
+										(Código:
+										258
+										)
+									</span><br><span class="Rqtd"><strong>Qtde.:</strong>0,38</span><span class="RUN"><strong>UN: </strong>KG</span><span class="RvlUnit"><strong>Vl. Unit.:</strong>
+										 
+										16,99</span></td>
+        <td align="right" valign="top" class="txtTit noWrap">
+									Vl. Total
+									<br><span class="valor">6,45</span></td>
+      </tr>
+      <tr id="Item + 2">
+        <td valign="top"><span class="txtTit">BACON</span><span class="RCod">
+										(Código:
+										172
+										)
+									</span><br><span class="Rqtd"><strong>Qtde.:</strong>0,135</span><span class="RUN"><strong>UN: </strong>KG</span><span class="RvlUnit"><strong>Vl. Unit.:</strong>
+										 
+										64,99</span></td>
+        <td align="right" valign="top" class="txtTit noWrap">
+									Vl. Total
+									<br><span class="valor">8,77</span></td>
+      </tr>
+      <tr id="Item + 3">
+        <td valign="top"><span class="txtTit">MOLHO QUERO MANJERICAO 340GR</span><span class="RCod">
+										(Código:
+										45138
+										)
+									</span><br><span class="Rqtd"><strong>Qtde.:</strong>1</span><span class="RUN"><strong>UN: </strong>UN</span><span class="RvlUnit"><strong>Vl. Unit.:</strong>
+										 
+										3,59</span></td>
+        <td align="right" valign="top" class="txtTit noWrap">
+									Vl. Total
+									<br><span class="valor">3,59</span></td>
+      </tr>
+      <tr id="Item + 4">
+        <td valign="top"><span class="txtTit">PAO FRANCES</span><span class="RCod">
+										(Código:
+										61
+										)
+									</span><br><span class="Rqtd"><strong>Qtde.:</strong>0,4</span><span class="RUN"><strong>UN: </strong>KG</span><span class="RvlUnit"><strong>Vl. Unit.:</strong>
+										 
+										13,99</span></td>
+        <td align="right" valign="top" class="txtTit noWrap">
+									Vl. Total
+									<br><span class="valor">5,59</span></td>
+      </tr>
+    </table>
+    <div id="totalNota" class="txtRight">
+      <div id="linhaTotal"><label>Qtd. total de itens:</label><span class="totalNumb">4</span></div>
+      <div id="linhaTotal" class="linhaShade"><label>Valor a pagar R$:</label><span class="totalNumb txtMax">24,40</span></div>
+      <div id="linhaForma"><label>Forma de pagamento:</label><span class="totalNumb txtTitR">Valor pago R$:</span></div>
+      <div id="linhaTotal"><label class="tx">
+											Cartão de Débito
+										</label><span class="totalNumb">24,40</span></div>
+      <div id="linhaTotal"></div>
+      <div id="linhaTotal" class="spcTop"><label class="txtObs">Informação dos Tributos Totais Incidentes
+									(Lei Federal 12.741/2012) R$</label><span class="totalNumb txtObs">5,29</span></div>
+    </div>
+  </div>
+  <div id="infos" class="txtCenter">
+    <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-collapsed="false">
+      <h4>Informações gerais da Nota</h4>
+      <ul data-role="listview" data-inset="false">
+        <li><strong>EMITIDA EM CONTINGÊNCIA</strong><br><br><strong>Número: </strong>29570<strong> Série: </strong>1<strong> Emissão: </strong>25/07/2025 17:32:16
+								- Via Consumidor 2
+								<br><br><strong>Protocolo de Autorização: </strong>242251010158851       25/07/2025 
+        às
+      17:35:52<br><br><strong>
+										Ambiente de Produção -
+									
+									Versão XML:
+									4.00
+									- Versão XSLT: 2.07
+								</strong></li>
+      </ul>
+    </div>
+    <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-collapsed="false">
+      <h4>Chave de acesso</h4>
+      <ul data-role="listview" data-inset="false">
+        <li>
+								Consulte pela Chave de Acesso em
+								
+								https://sat.sef.sc.gov.br/nfce/consulta<br><br><strong>Chave de acesso:</strong><br><span class="chave">4225 0736 4960 1800 0173 6500 1000 0295 7098 9761 4848</span></li>
+      </ul>
+    </div>
+    <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-collapsed="false">
+      <h4>Consumidor</h4>
+      <ul data-role="listview" data-inset="false">
+        <li><strong>Consumidor não identificado</strong></li>
+      </ul>
+    </div>
+    <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-collapsed="false">
+      <h4>Informações de interesse do contribuinte</h4>
+      <ul data-role="listview" data-inset="false">
+        <li>Trib aprox R$: 2,53 Fed e 2,76 Est;Fonte: SISCOMEX SC      ;Operador: 1 Vendedor: -;Automatizado por:;www.BRVATECH.com.br</li>
+      </ul>
+    </div>
+  </div>
+</div></div>
+                <div style="display: none;">
+                    <span id="Body_lblDataHora">27/06/2026 23:34:16</span>
+                </div>
+            </div>
+            <div class="notprint" style="padding: 15px; text-align: center">
+                <div id="Body_conFooter" class="panel panel-default" style="background-color: #D8D8D8; border-color: #D8D8D8">
+	<div class="panel-heading sat-panel-heading hide">
+		<div class="panel-title sat-panel-title">
+			<i></i><span class="sat-panel-title-text"></span>
+		</div>
+	</div><div class="sat-panel-content in">
+		<div class="panel-body">
+
+		</div><div class="panel-footer">
+			<div id="Body_conFooter_uppPanelButtons">
+				<a class="btn btn-default " id="Body_conFooter_btnDownload" class="btn btn-default " href="javascript:__doPostBack(&#39;ctl00$Body$conFooter$btnDownload&#39;,&#39;&#39;)"><i class="glyphicon glyphicon-download-alt sat-icon-with-text"></i><span class="sat-btn-text">Baixar documento XML</span></a><a class="btn btn-default " onclick="javascript:window.print();" id="Body_conFooter_btnPrint" class="btn btn-default " href="javascript:__doPostBack(&#39;ctl00$Body$conFooter$btnPrint&#39;,&#39;&#39;)"><i class="glyphicon glyphicon-print sat-icon-with-text"></i><span class="sat-btn-text">Imprimir página</span></a><a class="btn btn-default " id="Body_conFooter_btnVerDetalhe" class="btn btn-default " href="javascript:__doPostBack(&#39;ctl00$Body$conFooter$btnVerDetalhe&#39;,&#39;&#39;)"><i class="glyphicon glyphicon-eye-open sat-icon-with-text"></i><span class="sat-btn-text">Ver NFC-e detalhada</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+            </div>
+        </form>
+    </body>
+    </html>
+    
+
+        
+        <script type="text/javascript">
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function (sender, args)
+            {
+                var error = args.get_error();
+                if (error != undefined)
+                {
+                    var errorMessage = error.rawMessage;
+                    if (errorMessage == undefined)
+                    {
+                        errorMessage = error.message;
+                        if (errorMessage.indexOf(error.name) >= 0)
+                        {
+                            errorMessage = errorMessage.substr(error.name.length + 2);
+                        }
+                    }
+                    Sat.ShowMessage(Sat.MessageType.Error, errorMessage);
+                    args.set_errorHandled(true);
+                }
+            });
+        </script>
+    <a id="postBackEventHandler" href="javascript:__doPostBack(&#39;ctl00$postBackEventHandler&#39;,&#39;&#39;)"></a><div id="updatableContainer">
+
+</div><div id="upgMain" style="display:none;">
+	<div class="sat-up-mask">
+
+	</div><div class="sat-up-content">
+		<img class="sat-up-content-img" src="../../MasterPages/WebResourceHandler.axd?Sat.Framework.Web.UI.WebResources.Images.sat-loading.gif" /><div class="sat-up-content-msg">
+			Aguarde. Estamos processando sua solicitação...
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("vasMain"));
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+Normalizar();//]]>
+</script>
+<script role='startup'>Internal.Page.EnableMultipleRequests = true;Internal.Types.Cnpj.EnableAlphanumeric = true;</script><script role='startup'>Sat.Helpers.HttpRequestHelper = JSON.parse('{"MaxAllowedContentLength":2147483648,"MaxRequestLength":2147483648}');</script><script role='startup'>Sat.UrlBase = '../../';</script>
+<script type="text/javascript">
+//<![CDATA[
+
+(function(id) {
+    var e = document.getElementById(id);
+    if (e) {
+        e.dispose = function() {
+            Array.remove(Page_ValidationSummaries, document.getElementById(id));
+        }
+        e = null;
+    }
+})('vasMain');
+//]]>
+</script>
+<script role='startup'>ValidationSummary_Initialize("/tax.NET/WebResource.axd?d=3Ana46qO7iod3ZqHQP_O2mx1GPUyYyurVZN39tRGlNHF-O56S2PZrql0VhLy4E5UErvqx6f9g0-8K6iwt7e10SEs8LbLo54PnhfK1jMgyEYreprce-8qx1WmRvyFSwhEh4YOTdPIc3Xs31VSD5VNHzWw0v6VLHeUW2XqLC9GSvTzJy5pXh1e08W-Lihq4Npp-AeMxXi6ZOGlJuOV0&t=639180888080000000");</script><script role='startup'>Internal.Controls.BasePanel.CssTitleText = "sat-panel-title-text";</script>
+<script type="text/javascript">
+//<![CDATA[
+Internal.Controls.UpdateProgress.ID = "upgMain";Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("upgMain"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

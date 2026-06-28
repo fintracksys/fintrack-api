@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { assertSupportedNfceHost } from '../config/supported-nfce-hosts.config';
 import { CrawlerGetNfeDataDto } from '../dto';
 import { CrawlerGetUrlDataService } from './crawler-get-url-data.service';
 import { CrawlerVerifyUrlService } from './crawler-verify-url.service';
@@ -9,16 +10,16 @@ export class CrawlerValidateUrlService {
     private crawlerVerifyUrlService: CrawlerVerifyUrlService,
     private crawlerGetUrlDataService: CrawlerGetUrlDataService,
   ) {}
+
   async executeAsync(url: string): Promise<CrawlerGetNfeDataDto> {
-    console.log('url', url);
+    assertSupportedNfceHost(url);
+
     const validUrl = await this.crawlerVerifyUrlService.executeAsync(url);
 
     if (!validUrl) {
       throw new Error('Invalid URL');
     }
 
-    const data = await this.crawlerGetUrlDataService.executeAsync(url);
-
-    return data;
+    return this.crawlerGetUrlDataService.executeAsync(url);
   }
 }

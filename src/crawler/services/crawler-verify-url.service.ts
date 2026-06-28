@@ -1,22 +1,49 @@
 import { Injectable } from '@nestjs/common';
 import axios from 'axios';
+import {
+  assertSupportedNfceHost,
+  getNfceRequestHeaders,
+  MIN_NFCE_HTML_LENGTH,
+} from '../config/supported-nfce-hosts.config';
 
 @Injectable()
 export class CrawlerVerifyUrlService {
   async executeAsync(url: string): Promise<boolean> {
-    const response = await axios.head(url, {
-      timeout: 10000,
-      headers: {
-        'User-Agent':
-          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-      },
-    });
-    const contentLength = parseInt(response.headers['content-length'] || '0');
+    assertSupportedNfceHost(url);
 
-    if (contentLength < 5000) {
+    const headers = getNfceRequestHeaders();
+    const requestConfig = {
+      timeout: 10000,
+      headers,
+      maxRedirects: 5,
+    };
+
+    try {
+      const headResponse = await axios.head(url, requestConfig);
+      if (headResponse.status !== 200) {
+        return false;
+      }
+
+      const contentLength = parseInt(
+        headResponse.headers['content-length'] || '0',
+        10,
+      );
+      if (contentLength >= MIN_NFCE_HTML_LENGTH) {
+        return true;
+      }
+    } catch {
+      // PR and other portals may omit Content-Length on HEAD; fall back to GET.
+    }
+
+    const getResponse = await axios.get<string>(url, {
+      ...requestConfig,
+      responseType: 'text',
+    });
+
+    if (getResponse.status !== 200) {
       return false;
     }
 
-    return true;
+    return (getResponse.data?.length ?? 0) >= MIN_NFCE_HTML_LENGTH;
   }
 }
