@@ -16,10 +16,20 @@ export class CrawlerTransactionRepository {
         return PrismaPaymentMethod.DEBIT_CARD;
       case CrawlerPaymentMethod.CREDIT_CARD:
         return PrismaPaymentMethod.CREDIT_CARD;
+      case CrawlerPaymentMethod.PIX:
+        return PrismaPaymentMethod.PIX;
+      case CrawlerPaymentMethod.CASH:
+        return PrismaPaymentMethod.CASH;
+      case CrawlerPaymentMethod.BANK_TRANSFER:
+        return PrismaPaymentMethod.BANK_TRANSFER;
+      case CrawlerPaymentMethod.CHECK:
+        return PrismaPaymentMethod.CHECK;
       case CrawlerPaymentMethod.VOUCHER_CARD:
         return PrismaPaymentMethod.OTHER;
+      case CrawlerPaymentMethod.OTHER:
+        return PrismaPaymentMethod.OTHER;
       default:
-        return PrismaPaymentMethod.DEBIT_CARD;
+        return PrismaPaymentMethod.OTHER;
     }
   }
 

@@ -58,12 +58,10 @@ export class CrawlerUnifiedDto {
   @IsNotEmpty()
   transactionTypeId: string;
 
-  @ApiProperty({
-    example: '',
-  })
+  @ApiProperty({ example: '', required: false })
   @IsString()
-  @IsNotEmpty()
-  urlNfe: string;
+  @IsOptional()
+  urlNfe?: string;
 
   // Propriedades do CrawlerGetNfeDataDto
   @ApiProperty({ example: 'Loja Exemplo' })

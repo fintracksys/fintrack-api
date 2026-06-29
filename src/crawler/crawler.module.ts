@@ -1,6 +1,8 @@
 import { PrismaModule } from '@/prisma/prisma.module';
 import { Module } from '@nestjs/common';
 import { CrawlerController } from './crawler.controller';
+import { ParseNfeFromImageService } from './receipt-gpt/parse-nfe-from-image.service';
+import { ReceiptGptService } from './receipt-gpt/receipt-gpt.service';
 import {
   CrawlerTicketRepository,
   CrawlerTransactionRepository,
@@ -22,6 +24,8 @@ import {
     CrawlerValidateUrlService,
     CrawlerVerifyUrlService,
     CrawlerGetUrlDataService,
+    ReceiptGptService,
+    ParseNfeFromImageService,
     CrawlerTransactionRepository,
     CrawlerTicketRepository,
   ],
@@ -31,6 +35,8 @@ import {
     CrawlerValidateUrlService,
     CrawlerVerifyUrlService,
     CrawlerGetUrlDataService,
+    ReceiptGptService,
+    ParseNfeFromImageService,
     CrawlerTransactionRepository,
     CrawlerTicketRepository,
   ],

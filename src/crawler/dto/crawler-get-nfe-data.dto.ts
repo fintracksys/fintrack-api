@@ -42,7 +42,7 @@ export class CrawlerGetNfeDataDto {
 
   @IsString()
   @IsOptional()
-  storeAddress: string;
+  storeAddress?: string;
 
   @IsString()
   @IsNotEmpty()
@@ -61,8 +61,8 @@ export class CrawlerGetNfeDataDto {
   cnpj: string;
 
   @IsString()
-  @IsNotEmpty()
-  url: string;
+  @IsOptional()
+  url?: string;
 
   @IsArray()
   @ValidateNested({ each: true })
