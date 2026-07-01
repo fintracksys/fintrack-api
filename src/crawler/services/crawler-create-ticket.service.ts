@@ -8,6 +8,7 @@ import {
   CrawlerTicketRepository,
   CrawlerTransactionRepository,
 } from '../repositories';
+import { normalizeMeasure } from '../utils/field-cleaner.util';
 
 @Injectable()
 export class CrawlerCreateTicketService {
@@ -50,7 +51,7 @@ export class CrawlerCreateTicketService {
       codProduct: item.codProduct,
       nameProduct: item.nameProduct,
       quantity: Number(item.quantity),
-      measure: item.measure,
+      measure: normalizeMeasure(item.measure ?? '') || 'UN',
       price: Number(item.price),
       totalValue: Number(item.totalValue),
       transactionId: transaction.id,

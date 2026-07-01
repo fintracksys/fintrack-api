@@ -1,6 +1,7 @@
 import { PrismaService } from '@/prisma/prisma.service';
 import { Injectable } from '@nestjs/common';
 import { CrawlerCreateTicketDto } from '../dto/crawler-create-ticket.dto';
+import { normalizeMeasure } from '../utils/field-cleaner.util';
 
 @Injectable()
 export class CrawlerTicketRepository {
@@ -12,7 +13,7 @@ export class CrawlerTicketRepository {
         codProduct: dto.codProduct,
         nameProduct: dto.nameProduct,
         quantity: dto.quantity,
-        measure: dto.measure || '',
+        measure: normalizeMeasure(dto.measure ?? '') || 'UN',
         price: dto.price,
         totalValue: dto.totalValue,
         transactionId: dto.transactionId,
@@ -26,7 +27,7 @@ export class CrawlerTicketRepository {
         codProduct: ticket.codProduct,
         nameProduct: ticket.nameProduct,
         quantity: ticket.quantity,
-        measure: ticket.measure || '',
+        measure: normalizeMeasure(ticket.measure ?? '') || 'UN',
         price: ticket.price,
         totalValue: ticket.totalValue,
         transactionId: ticket.transactionId,

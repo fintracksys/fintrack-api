@@ -5,6 +5,7 @@ import {
   CrawlerTicketRepository,
   CrawlerTransactionRepository,
 } from '../repositories';
+import { normalizeMeasure } from '../utils/field-cleaner.util';
 import { CrawlerGetUrlDataService } from './crawler-get-url-data.service';
 import { CrawlerVerifyUrlService } from './crawler-verify-url.service';
 
@@ -49,7 +50,7 @@ export class CrawlerBackendCreateTicketService {
       codProduct: item.codProduct,
       nameProduct: item.nameProduct,
       quantity: Number(item.quantity),
-      measure: item.measure,
+      measure: normalizeMeasure(String(item.measure ?? '')) || 'UN',
       price: Number(item.price),
       totalValue: Number(item.totalValue),
       transactionId: transaction.id,

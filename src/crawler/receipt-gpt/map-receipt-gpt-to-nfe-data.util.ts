@@ -9,9 +9,9 @@ import { formatAddress } from '../utils/address-formatter.util';
 import { formatCnpj } from '../utils/cnpj-formatter.util';
 import {
   cleanCodProduct,
-  cleanMeasure,
   cleanPrice,
   cleanQuantity,
+  normalizeMeasure,
 } from '../utils/field-cleaner.util';
 import { LOW_ITEM_CONFIDENCE_THRESHOLD } from './receipt-gpt.config';
 import { ReceiptGptResponse } from './receipt-gpt.config';
@@ -151,7 +151,7 @@ export function mapReceiptGptToNfeData(
     nameProduct: item.descricao?.trim() || 'Item sem descrição',
     codProduct: cleanCodProduct(item.codigo ?? ''),
     quantity: toDecimal(item.quantidade),
-    measure: cleanMeasure(item.unidade ?? '') || item.unidade?.trim() || 'UN',
+    measure: normalizeMeasure(item.unidade ?? '') || 'UN',
     price: toDecimal(item.valor_unitario),
     totalValue: toDecimal(item.valor_total),
   }));

@@ -6,9 +6,9 @@ import { formatAddress, formatCnpj } from '../utils';
 import { extractDateTimeFromElement } from '../utils/date-time-extractor.util';
 import {
   cleanCodProduct,
-  cleanMeasure,
   cleanPrice,
   cleanQuantity,
+  normalizeMeasure,
 } from '../utils/field-cleaner.util';
 
 type NfceItem = CrawlerGetNfeDataDto['items'][number];
@@ -79,7 +79,7 @@ function extractItems($: cheerio.Root): NfceItem[] {
       nameProduct,
       codProduct: cleanCodProduct(codProductRaw),
       quantity: new Decimal(cleanQuantity(quantityRaw)),
-      measure: cleanMeasure(measureRaw),
+      measure: normalizeMeasure(measureRaw),
       price: new Decimal(cleanPrice(priceRaw)),
       totalValue: new Decimal(cleanPrice(totalValueRaw)),
     });

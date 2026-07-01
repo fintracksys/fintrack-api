@@ -2,6 +2,8 @@
  * Utilitários para limpeza de campos extraídos do crawler
  */
 
+const MAX_MEASURE_LENGTH = 2;
+
 /**
  * Extrai apenas números do código do produto
  * @param codProduct - String contendo o código do produto
@@ -44,6 +46,16 @@ export function cleanMeasure(measure: string): string {
   if (unIndex === -1) return measure.trim();
 
   return measure.substring(unIndex + 3).trim();
+}
+
+export function normalizeMeasure(measure: string): string {
+  const cleaned = cleanMeasure(measure);
+  if (!cleaned) return '';
+
+  const lettersOnly = cleaned.replace(/[^a-zA-Z]/g, '');
+  const source = lettersOnly || cleaned;
+
+  return source.substring(0, MAX_MEASURE_LENGTH).toUpperCase();
 }
 
 /**
